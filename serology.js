@@ -247,7 +247,7 @@ function saveAndPrintReport() {
         background: white;
     }
     .print-container {
-        max-width: 800px;
+        max-width: 700px;
         width: 100%;
         margin: 140px auto 0; /* ← increase this number to move content down */
         font-size: 14px;
