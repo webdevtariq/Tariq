@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUA LABORATORY - Semen Analysis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="semen.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-area">
+                <i class="fas fa-flask logo-icon"></i>
+                <h1>DUA LABORATORY</h1>
+                <p>Semen Analysis Module</p>
+            </div>
+            <div class="patient-summary" id="patientSummary"></div>
+            <button class="btn-back" onclick="goBack()"><i class="fas fa-arrow-left"></i> Back</button>
+        </header>
+
+        <div class="semen-layout">
+            <main class="entry-area">
+                <div class="card form-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-microscope"></i> Semen Analysis Entry</h2>
+                    </div>
+                    <div id="semenTestsTable" class="card-body">
+                        <!-- Dynamic form will be inserted here -->
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn-primary" onclick="saveAndPrintReport()"><i class="fas fa-save"></i> Save & Print</button>
+                        <button class="btn-secondary" onclick="exportToPDF()"><i class="fas fa-file-pdf"></i> PDF</button>
+                        <button class="btn-secondary" onclick="previewReport()"><i class="fas fa-eye"></i> Preview</button>
+                    </div>
+                </div>
+                <div id="reportPreview" class="preview-card" style="display: none;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2><i class="fas fa-file-alt"></i> Report Preview</h2>
+                        </div>
+                        <div class="card-body" id="reportContent"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="database.js"></script>
+    <script src="semen.js"></script>
+</body>
+</html>

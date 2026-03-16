@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUA LABORATORY - Urine D/R</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="urine.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-area">
+                <i class="fas fa-flask logo-icon"></i>
+                <h1>DUA LABORATORY</h1>
+                <p>Urine D/R Module</p>
+            </div>
+            <div class="patient-summary" id="patientSummary"></div>
+            <button class="btn-back" onclick="goBack()"><i class="fas fa-arrow-left"></i> Back</button>
+        </header>
+
+        <!-- Main area (full width, no sidebar) -->
+        <main class="entry-area">
+            <div class="card form-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-vial"></i> Urine D/R Test Entry</h2>
+                </div>
+                <div id="urineTestsTable" class="card-body">
+                    <!-- Fixed form injected by JS -->
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-primary" onclick="saveAndPrintReport()"><i class="fas fa-save"></i> Save & Print</button>
+                    <button class="btn-secondary" onclick="exportToPDF()"><i class="fas fa-file-pdf"></i> PDF</button>
+                    <button class="btn-secondary" onclick="previewReport()"><i class="fas fa-eye"></i> Preview</button>
+                </div>
+            </div>
+
+            <!-- Preview card -->
+            <div id="reportPreview" class="preview-card" style="display: none;">
+                <div class="card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-file-alt"></i> Report Preview</h2>
+                    </div>
+                    <div class="card-body" id="reportContent"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="database.js"></script>
+    <script src="urine.js"></script>
+</body>
+</html>

@@ -1,0 +1,435 @@
+/* patient.css - Professional Laboratory Management System - Enhanced UI */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: linear-gradient(145deg, #f6f8fc 0%, #e9eef5 100%);
+    min-height: 100vh;
+    padding: 24px;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 20px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,20,50,0.1);
+    margin-bottom: 24px;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+/* patient.css - (only changes from previous, full file in previous message) */
+/* Add this to the existing CSS */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo-icon {
+    font-size: 40px;
+    color: #1e2b4f;
+}
+/* rest unchanged */
+
+.datetime {
+    text-align: right;
+}
+
+.current-date {
+    color: #1e2b4f;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.current-time {
+    color: #5a6e8a;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* Navigation */
+.main-nav {
+    background: white;
+    border-radius: 16px;
+    padding: 8px;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0,20,40,0.05);
+}
+
+.nav-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    background: transparent;
+    color: #4a5b7a;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+
+.nav-btn:hover {
+    background: #f0f4fa;
+    color: #1e2b4f;
+}
+
+.nav-btn.active {
+    background: linear-gradient(135deg, #1e2b4f, #2a3f6e);
+    color: white;
+    box-shadow: 0 4px 10px rgba(30,43,79,0.2);
+}
+
+/* Sections */
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 20px 40px rgba(0,20,50,0.08);
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.card h2 {
+    color: #1e2b4f;
+    margin-bottom: 24px;
+    font-size: 22px;
+    font-weight: 600;
+    border-bottom: 2px solid #eef2f7;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Form Styles */
+.form-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.form-group.full-width {
+    flex: 0 0 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1e2b4f;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+.auto-badge {
+    background: #eef2f7;
+    color: #4a5b7a;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-left: 8px;
+    font-weight: 400;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e6ecf3;
+    border-radius: 16px;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    background: #fafcff;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #2a3f6e;
+    box-shadow: 0 0 0 4px rgba(42,63,110,0.1);
+    background: white;
+}
+
+input[readonly] {
+    background: #f0f4fa;
+    color: #1e2b4f;
+    font-weight: 500;
+    border-color: #d9e2ef;
+}
+
+/* Test Panels Grid */
+.test-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.test-panel {
+    background: #f8fbfe;
+    border: 2px solid #e6ecf3;
+    border-radius: 20px;
+    padding: 16px;
+    transition: all 0.2s ease;
+}
+
+.test-panel:hover {
+    border-color: #2a3f6e;
+    background: white;
+    box-shadow: 0 8px 20px rgba(42,63,110,0.08);
+}
+
+.test-panel h3 {
+    color: #1e2b4f;
+    font-size: 16px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.test-panel label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-weight: 400;
+    color: #4a5b7a;
+    cursor: pointer;
+}
+
+.test-panel input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #2a3f6e;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #1e2b4f, #2a3f6e);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(30,43,79,0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(30,43,79,0.3);
+}
+
+.btn-secondary {
+    background: white;
+    color: #1e2b4f;
+    border: 2px solid #e6ecf3;
+    padding: 14px 32px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: #f0f4fa;
+    border-color: #2a3f6e;
+}
+
+.form-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+/* Search Section */
+.search-box {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 16px 20px;
+    border-radius: 40px;
+    background: white;
+}
+
+.btn-search {
+    background: #2a3f6e;
+    color: white;
+    border: none;
+    padding: 0 40px;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-search:hover {
+    background: #1e2b4f;
+}
+
+/* Patient Results */
+.search-results {
+    max-height: 500px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.patient-result {
+    background: #f8fbfe;
+    border: 2px solid #e6ecf3;
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.patient-result:hover {
+    border-color: #2a3f6e;
+    background: white;
+    transform: translateX(4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.patient-result h4 {
+    color: #1e2b4f;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.patient-result p {
+    color: #5a6e8a;
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+/* History List */
+.history-list {
+    max-height: 600px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.history-item {
+    background: #f8fbfe;
+    border: 2px solid #e6ecf3;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.history-item:hover {
+    border-color: #2a3f6e;
+    background: white;
+}
+
+.history-info h4 {
+    color: #1e2b4f;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.history-info p {
+    color: #5a6e8a;
+    font-size: 14px;
+}
+
+.history-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.history-actions button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-view {
+    background: #e3eaf3;
+    color: #1e2b4f;
+}
+.btn-view:hover { background: #d0dbea; }
+
+.btn-print {
+    background: #2a3f6e;
+    color: white;
+}
+.btn-print:hover { background: #1e2b4f; }
+
+.btn-edit {
+    background: #fff1d6;
+    color: #b45b0f;
+}
+.btn-edit:hover { background: #ffe4bc; }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #eef2f7;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #b0c0d0;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #8fa0b5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-row { flex-direction: column; }
+    .main-nav { flex-direction: column; }
+    .header { flex-direction: column; text-align: center; gap: 16px; }
+    .history-item { flex-direction: column; gap: 16px; text-align: center; }
+    .form-actions { flex-direction: column; }
+}
