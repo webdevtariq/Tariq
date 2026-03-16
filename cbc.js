@@ -40,7 +40,7 @@ function loadCBCTests() {
         console.warn('CBC panel not found, using fallback tests.');
         cbcTests = [
             { id: 'hb', name: 'Hemoglobin', unit: 'g/dL', maleRange: '13-18', femaleRange: '12-16', childRange: '11-16' },
-            { id: 'rbc', name: 'RBC', unit: 'million/µL', maleRange: '4.5-5.5', femaleRange: '3.9-5.3', childRange: '4.1-6.1' },
+            { id: 'rbc', name: 'RBC', unit: 'million/µL', maleRange: '4.5-6.5', femaleRange: '3.9-5.3', childRange: '4.1-6.1' },
             { id: 'hct', name: 'HCT', unit: '%', maleRange: '40-54', femaleRange: '40-54', childRange: '40-54' },
             { id: 'mcv', name: 'MCV', unit: 'fL', maleRange: '76-96', femaleRange: '76-96', childRange: '76-96' },
             { id: 'mch', name: 'MCH', unit: 'pg', maleRange: '28-32', femaleRange: '28-32', childRange: '28-32' },
